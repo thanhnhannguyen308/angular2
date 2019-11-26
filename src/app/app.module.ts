@@ -6,17 +6,50 @@ import { AppComponent } from './app.component';
 import {FormsModule} from '@angular/forms';
 import { TestService } from './services/test.service';
 import { HttpClientModule } from '@angular/common/http';
-
+import { AlertContainerComponent } from './components/alert-container/alert-container.component';
+import { ClarityModule } from '@clr/angular'
+import {
+  ClrIconModule,
+  ClrMainContainerModule,
+  ClrInputModule,
+  ClrSelectModule,
+  ClrButtonModule,
+  ClrTabsModule,
+  ClrDatagridModule,
+  ClrCheckboxModule,
+  ClrDropdownModule,
+  ClrStackViewModule,
+  ClrDatepickerModule
+} from '@clr/angular';
+import { HomeContainerComponent } from './components/home-container/home-container.component';
+import { AppRouter } from './app.routers';
+import { EmployeeContainerComponent } from './components/employee-container/employee-container.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AlertContainerComponent,
+    HomeContainerComponent,
+    EmployeeContainerComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule 
+    HttpClientModule,
+    ClarityModule,
+    ClrIconModule,
+  ClrMainContainerModule,
+  ClrInputModule,
+  ClrSelectModule,
+  ClrButtonModule,
+  ClrTabsModule,
+  ClrDatagridModule,
+  ClrCheckboxModule,
+  ClrDropdownModule,
+  ClrStackViewModule,
+  ClrDatepickerModule,
+  AppRouter
   ],
   providers: [TestService],
   bootstrap: [AppComponent]

@@ -1,0 +1,7 @@
+<form #name = "ngForm" (ngSubmit) = onSubmit(name.value)>
+    <input type="text" name="name" ngModel>
+    <button type="submit" class="btn btn-primary">Gui</button>
+</form>
+<h1> Ket qua tu component cha sang con: {{ nameParent }} va nhan la {{ nhan }}</h1>
+<h1>Ket qua ViewChild la: {{ resultViewChild }}</h1>
+

@@ -1,0 +1,18 @@
+<p>employee-container works!</p>
+<clr-datagrid>
+    <clr-dg-column>ID</clr-dg-column>
+   <clr-dg-column>createdAt</clr-dg-column>
+   <clr-dg-column>Name</clr-dg-column>
+   <clr-dg-column>Age</clr-dg-column> 
+   <clr-dg-column>Status</clr-dg-column> 
+ 
+   <clr-dg-row *ngFor="let user of lstEmloyee">
+       <clr-dg-cell>{{user.id}}</clr-dg-cell>
+       <clr-dg-cell>{{user.createdAt}}</clr-dg-cell>
+       <clr-dg-cell>{{user.name }}</clr-dg-cell>
+       <clr-dg-cell>{{user.age}}</clr-dg-cell>
+       <clr-dg-cell>{{user.status}}</clr-dg-cell>
+   </clr-dg-row> 
+ 
+   <!-- <clr-dg-footer>{{lstEmloyee.length}} users</clr-dg-footer> -->  
+ </clr-datagrid> 

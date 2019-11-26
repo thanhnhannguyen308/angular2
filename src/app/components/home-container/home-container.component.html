@@ -1,0 +1,36 @@
+<p>home-container works!</p>
+<app-alert-container [nameParent] = "nameParent"
+                     (ChildOfName) = "CheckChildOfName($event)"></app-alert-container>
+
+<h1>Day la name child:  {{ nameChild }}</h1>
+<button type="submit" class="btn btn-primary" (click)=" changeName()">Change Name</button>
+<h3 *ngIf="result">Day la ket qua dung</h3>
+<div [ngSwitch]="testswitch">
+  <p *ngSwitchCase="'red'">This is red</p>
+  <p *ngSwitchDefault>This is default</p>
+</div>
+
+<div *ngFor="let item of list">
+  <ul>
+    {{item | uppercase}}
+  </ul>
+</div>
+
+<h2>{{today | date:'fullDate'}}</h2>
+
+<form #userform = "ngForm" (ngSubmit) = onSubmit(userform.value)>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" ngModel>
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" name="password" id="exampleInputPassword1" placeholder="Password" ngModel>
+  </div>
+  <div class="form-group form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>  
