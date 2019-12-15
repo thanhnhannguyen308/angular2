@@ -14,4 +14,9 @@ export class EmployeeService{
     GetListEmployee() : Observable<any[]>{
         return this.http.get(this.apiUrl) as Observable<any[]>;
     }
+
+    // etEMployee(): Observable<any>{
+        
+    //     return this.http.get(this.apiUrl,"")
+    // }G
 }

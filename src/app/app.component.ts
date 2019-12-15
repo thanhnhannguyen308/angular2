@@ -2,6 +2,8 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { EmployeeService } from './services/employees.service';
 import { TestService } from './services/test.service';
 import { AlertContainerComponent } from './components/alert-container/alert-container.component';
+import { LoginService } from './services/login.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -13,10 +15,19 @@ export class AppComponent implements OnInit{
   result: boolean = true;
   testswitch = 'red';
 
-  constructor(){}
+  constructor(
+    private loginService: LoginService,
+    private route: Router
+  ){}
 
   ngOnInit(){
     
+  }
+
+  Logout(){
+    this.loginService.setLogin(false);
+    alert('Logout success !');
+    this.route.navigate(['home']);
   }
 
 }

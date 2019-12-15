@@ -24,13 +24,19 @@ import {
 import { HomeContainerComponent } from './components/home-container/home-container.component';
 import { AppRouter } from './app.routers';
 import { EmployeeContainerComponent } from './components/employee-container/employee-container.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+import { EmployeeDetailComponent } from './components/employee-detail/employee-detail.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AlertContainerComponent,
     HomeContainerComponent,
-    EmployeeContainerComponent
+    EmployeeContainerComponent,
+    NotFoundComponent,
+    EmployeeDetailComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
